@@ -51,29 +51,11 @@ G
 src/d_Funtions/NcR.java,6/1/610751c500a21371e55f9df17a2b6ff00793fa26
 b
 2src/c_OperatorsAndForLoop/CheckNumberSequence.java,1/5/1511801894c9460f6b596301b35a8767d0bc38c5
-I
-src/e_Array/SumArray.java,a/7/a73e8726681113952184540a06449e941deba663
 R
 "src/d_Funtions/CheckFibonacci.java,a/c/ace837ac544e4a119f63eb9809877b0a63ffadf3
-J
-src/e_Array/MaxSearch.java,1/a/1ae1826d03036026b3e6835372cc5cc81ca3d318
 [
-+src/e_Array/PrimitivesAndNonPrimitives.java,8/9/89d1bcdf5c134df0eb46abe4519759a000056949
-M
-src/e_Array/LinearSearch.java,1/b/1bc495c501c9a37048a74e80286a819059004fbf
-M
-src/e_Array/ArrangeArray.java,e/6/e6467438d4b9b781557dc565e4443adcbf8836b7
-Q
-!src/e_Array/PrintAllPairsOne.java,7/8/78877c8908b91da3991a4e25b35726733d60a769
-K
-src/e_Array/FindUnique.java,f/6/f6fd762bdead0afe03c9f84904064774776177a7
-N
-src/e_Array/FindDuplicate.java,a/b/ab5d25e5218ea1172c9d6563453ab7cbdae1d984
-H
-src/e_Array/PairSum.java,1/1/11f217db407bfcd450991469b8043fedf5ec9429
-K
-src/e_Array/TripletSum.java,f/6/f68067ef808b90cda563fedd97e405dec449ee63
-Q
-!src/e_Array/PrintAllPairsTwo.java,9/e/9e4f0baf40d883e42585ca7573fa04809ffa7508
-P
- src/e_Array/SwapAlternative.java,f/7/f71404b0d08193d663e3857b8fbbff5c1639fe5d
++src/e_ArrayOne/IntersectionOfTwoArrays.java,d/7/d71059183c4c28ed41b74b95cbec85e4e5ccd130
+O
+src/e_ArrayOne/SortZeroOne.java,1/6/16738a37710e892e1e9980f00dedb3fd4b055939
+U
+%src/e_ArrayOne/TakeInputAndPrint.java,f/a/fa7d7843fc9acabbaa7a75aeb1863ed09fd9b1d7
