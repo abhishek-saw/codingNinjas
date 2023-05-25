@@ -33,9 +33,9 @@ public class SortZeroOneTwo {
             else{
                 i++;
             }
-//            System.out.print("Round " + i + ": ");
-//            TakeInputAndPrint.printArray(arr);
-//            System.out.println();
+            System.out.print("Round " + i + ": ");
+            TakeInputAndPrint.printArray(arr);
+            System.out.println();
         }
     }
 }
