@@ -39,3 +39,10 @@ This repository is licensed under the [MIT License](LICENSE). You are free to us
 ## Acknowledgements
 
 The questions and concepts covered in this repository are part of the "Basics of Java with Data Structures and Algorithms" course offered by Coding Ninjas. Special thanks to Coding Ninjas for providing the content and resources for learning.
+
+## Renamaing
+
+git branch -m codingNinja main
+git fetch origin
+git branch -u origin/main main
+git remote set-head origin -a
