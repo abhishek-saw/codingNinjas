@@ -9,7 +9,7 @@ public class SumOfTwoArray {
         int k = Math.max(arr1.length,arr2.length);
         int sum = 0;
         int carry = 0;
-        while(i>=0 &&j>=0){
+        while(i>=0 &&j>=0){//till small completes
             sum = arr1[i] + arr2[j] + carry;
             output[k] = sum%10;
             carry = sum/10;
@@ -17,21 +17,21 @@ public class SumOfTwoArray {
             j--;
             k--;
         }
-        while(i>=0){
+        while(i>=0){//till large completes
             sum = arr1[i] + carry;
             output[k] = sum%10;
             carry = sum/10;
             i--;
             k--;
         }
-        while(j>=0){
+        while(j>=0){//till large completes
             sum =  arr2[j] + carry;
             output[k] = sum%10;
             carry = sum/10;
             j--;
             k--;
         }
-        output[0] = carry;
+        output[0] = carry;//if any carry
     }
     public static void main(String[] args) {
         int arr1[] = {9,7,6,1};
