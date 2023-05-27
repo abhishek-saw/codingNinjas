@@ -42,7 +42,7 @@ The questions and concepts covered in this repository are part of the "Basics of
 
 ## Renamaing
 
-git branch -m codingNinja main
-git fetch origin
-git branch -u origin/main main
-git remote set-head origin -a
+1. git branch -m codingNinja main
+2. git fetch origin
+3. git branch -u origin/main main
+4. git remote set-head origin -a
