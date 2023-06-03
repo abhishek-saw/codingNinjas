@@ -10,19 +10,15 @@ public class StringPalindrome {
         System.out.println(bol2);
     }
     public static boolean isPalindrome(String str) {
-        boolean answer = false;
         int s = 0;
         int e = str.length()-1;
-        while(s<=e){
-            if(str.charAt(s)==str.charAt(e)) {
-                answer = true;
-            }
-            else{
-                answer = false;
+        while(s<e){
+            if(str.charAt(s)!=str.charAt(e)) {
+                return false;
             }
             s++;
             e--;
         }
-        return answer;
+        return true;
     }
 }
