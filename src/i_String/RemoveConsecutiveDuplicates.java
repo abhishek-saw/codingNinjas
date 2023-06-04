@@ -4,7 +4,7 @@ public class RemoveConsecutiveDuplicates {
     public static void main(String[] args) {
         String str1 = "aaaa";
         System.out.println(removeConsecutiveDuplicates(str1));
-        String str2 = "aaaabbbbcccc";
+        String str2 = "aaaabbbbbcccc";
         System.out.println(removeConsecutiveDuplicates(str2));
     }
     private static String removeConsecutiveDuplicates(String str) {

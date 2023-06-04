@@ -6,7 +6,7 @@ public class CheckPermutation {
         String str2 = "cba";
         System.out.println(checkPermutation(str1,str2));
         String str3 = "race";
-        String str4 = "rate";
+        String str4 = "rame";
         System.out.println(checkPermutation(str3,str4));
     }
     private static boolean checkPermutation(String str1, String str2) {
