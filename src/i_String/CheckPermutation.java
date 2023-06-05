@@ -5,26 +5,25 @@ public class CheckPermutation {
         String str1 = "abc";
         String str2 = "cba";
         System.out.println(checkPermutation(str1,str2));
-        String str3 = "race";
-        String str4 = "rame";
+        String str3 = "sinrtg";
+        String str4 = "striing";
         System.out.println(checkPermutation(str3,str4));
     }
     private static boolean checkPermutation(String str1, String str2) {
-        boolean ans = false;
-        for (int i = 0; i < str1.length(); i++) {
-            for (int j = 0; j < str2.length(); j++) {
-                if (str1.charAt(i) == str2.charAt(j)) {
-                    ans = true;
-                    break;
-                }
-                else{
-                    ans = false;
-                }
-            }
-            if(!ans) {
-                break;
+        int arr[] = new int[256];
+        for(int i=0;i<str1.length();i++){
+            int num = str1.charAt(i);
+            arr[num] += 1;
+        }
+        for(int i=0;i<str2.length();i++){
+            int num = str2.charAt(i);
+            arr[num] -= 1;
+        }
+        for(int i=0;i<arr.length;i++){
+            if(arr[i]!=0){
+                return false;
             }
         }
-        return ans;
+        return true;
     }
 }
