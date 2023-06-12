@@ -4,22 +4,34 @@ public class CompressedString {
     public static void main(String[] args) {
         String str = "aaabbccdsa";
         System.out.println(compressedString(str));
+        String str1 = "aabbb";
+        System.out.println(compressedString(str1));
     }
 
     private static String compressedString(String str) {
         String answer = "";
-        int arr[] = new int[256];
-        for(int i = 0;i<str.length();i++){
-            int num = str.charAt(i);
-            arr[num] +=1;
-        }
-        for(int j = 0;j<arr.length;j++){
-            if(arr[j]!=0){
-                answer= answer + (char)j;
-                if(arr[j]!=1){
-                    answer= answer +arr[j];
+        int index = 0;
+        int count = 1;
+        answer = answer+str.charAt(0);
+        for(int i=1;i<str.length();i++){
+            if(answer.charAt(index)!=str.charAt(i)){
+                if(count==1) {
+                    answer = answer + str.charAt(i);
+                    index += 1;
+                    count = 1;
+                }
+                else{
+                    answer = answer + count + str.charAt(i);
+                    index += 2;
+                    count = 1;
                 }
             }
+            else{
+                count++;
+            }
+        }
+        if(count!=1) {
+            answer = answer + count;
         }
         return answer;
     }
