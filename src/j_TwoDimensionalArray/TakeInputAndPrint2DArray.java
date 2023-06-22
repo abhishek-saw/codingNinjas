@@ -23,7 +23,7 @@ public class TakeInputAndPrint2DArray {
     }
     public static void print2DArray(int[][] arr2D) {
         for(int i =0;i< arr2D.length;i++){
-            for(int j =0;j< arr2D[0].length;j++){
+            for(int j =0;j< arr2D[i].length;j++){
                 System.out.print(arr2D[i][j]);
                 System.out.print(" ");
             }
