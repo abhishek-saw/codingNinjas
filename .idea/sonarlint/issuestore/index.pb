@@ -1,14 +1,6 @@
 
 [
 +src/c_OperatorsAndForLoop/NthFibonacci.java,f/a/fab15d8000eb85e71ede75c478e1608d573f6b26
-K
-src/z_test/NinjaPuzzle.java,a/e/aee447ba2e1e5e2f39725808ca029ce5d7ef957e
-Q
-!src/z_test/NumberStarPattern.java,c/8/c81d5c124527f0c0c8b1e46cb728a2d5716c4e96
-G
-src/z_test/FindGCD.java,d/4/d412e3d51533ca37ccfb2d96b7a1b5934df3b64e
-^
-.src/c_OperatorsAndForLoop/BinaryToDecimal.java,b/8/b8acd52a7e643fe2e116ceebbcf5ea341ab9d734
 Q
 !src/d_Funtions/DivideNumbers.java,6/c/6c102387b58f74f5dd3082884a7bc571692b23ce
 \
@@ -49,8 +41,6 @@ N
 src/d_Funtions/CheckPrime.java,3/d/3d603debe95385c8f577abd078c5863e6e7b812d
 G
 src/d_Funtions/NcR.java,6/1/610751c500a21371e55f9df17a2b6ff00793fa26
-b
-2src/c_OperatorsAndForLoop/CheckNumberSequence.java,1/5/1511801894c9460f6b596301b35a8767d0bc38c5
 R
 "src/d_Funtions/CheckFibonacci.java,a/c/ace837ac544e4a119f63eb9809877b0a63ffadf3
 [
@@ -59,3 +49,36 @@ O
 src/e_ArrayOne/SortZeroOne.java,1/6/16738a37710e892e1e9980f00dedb3fd4b055939
 U
 %src/e_ArrayOne/TakeInputAndPrint.java,f/a/fa7d7843fc9acabbaa7a75aeb1863ed09fd9b1d7
+^
+.src/j_TwoDimensionalArray/PrintColumnWise.java,8/8/88106d4af3c08cb3a1b973994f4139ee714141ee
+[
++src/j_TwoDimensionalArray/Print2DArray.java,1/2/12d61065dc0429129e1a9731e7960b6a68778eec
+^
+.src/j_TwoDimensionalArray/TransposeMatrix.java,2/0/20b906fc3b0dea0ddf914104bcd94d0b9102ade5
+^
+.src/c_OperatorsAndForLoop/BinaryToDecimal.java,b/8/b8acd52a7e643fe2e116ceebbcf5ea341ab9d734
+]
+-src/j_TwoDimensionalArray/QueryAndMatrix.java,1/4/1430841270c921101ceec4fe787f477aefb9fd10
+k
+;src/j_TwoDimensionalArray/SumOfBoundaryAndDiagonal_One.java,4/0/4001b8bbf363711973320afbba6fe9fde7ef85a7
+k
+;src/j_TwoDimensionalArray/SumOfBoundaryAndDiagonal_Two.java,5/7/57e9363214973b2115d12f19e3bcd3beb543cc67
+9
+	README.md,8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
+?
+CodingNinja.iml,9/b/9bf9c8a0e1f540382059d9fc4fa2407fb6bfacd1
+:
+
+.gitignore,a/5/a5cc2925ca8258af241be7e5b0381edf30266302
+]
+-src/j_TwoDimensionalArray/PrintLikeAWave.java,c/b/cb27509e2943a03cfcee18bab9f4299d3f63feac
+[
++src/j_TwoDimensionalArray/SquareMatrix.java,d/f/df9bea0e885018e96828cf24191f4ac4413d1dad
+b
+2src/j_TwoDimensionalArray/PrintMatrixInSpiral.java,2/4/24d94aaf36583497f963ba8e8f02b4d9af0381f0
+=
+src/xpassword,9/4/94f619077231c208358573a214ced8423293bac9
+g
+7src/j_TwoDimensionalArray/TakeInputAndPrint2DArray.java,d/a/da5daa9e5f76668b4bbaffcb8f29307b2c7cccc2
+a
+1src/j_TwoDimensionalArray/LargestRowOrColumn.java,2/b/2ba5fb8227e5ee8161d11beb33e076defe750b3f
