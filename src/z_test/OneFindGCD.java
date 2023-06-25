@@ -1,6 +1,6 @@
 package z_test;
 
-public class FindGCD {
+public class OneFindGCD {
     public static void main(String[] args) {
 
     int x = 6;

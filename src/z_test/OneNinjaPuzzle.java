@@ -1,6 +1,6 @@
 package z_test;
 
-public class NinjaPuzzle {
+public class OneNinjaPuzzle {
     public static void main(String[] args) {
         int n = 5;
         int i = 1;
