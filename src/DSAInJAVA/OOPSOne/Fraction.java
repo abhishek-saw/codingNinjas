@@ -1,12 +1,14 @@
 package DSAInJAVA.OOPSOne;
 
+import DSAInJAVA.OOPSTwo.DivideByZeroException;
+
 public class Fraction {
     private int numerator;
     private int denominator;
     //constructor
-    public Fraction(int numerator, int denominator) {
+    public Fraction(int numerator, int denominator) throws DivideByZeroException {
         if(denominator == 0){
-            throw new ArithmeticException();
+            throw new DivideByZeroException();
         }
         this.numerator = numerator;
         this.denominator = denominator;
@@ -53,7 +55,13 @@ public class Fraction {
     public static Fraction addition(Fraction f1, Fraction f2) {
         int num = f1.numerator*f2.denominator + f1.denominator*f2.numerator;
         int den = f1.denominator*f2.denominator;
-        Fraction result = new Fraction(num,den);;
+        Fraction result = null;
+        try {
+            result = new Fraction(num,den);
+        } catch (DivideByZeroException e) {
+            throw new RuntimeException(e);
+        }
+        ;
         return result;
     }
     // getters and setters
