@@ -2,7 +2,6 @@ package DSAInJAVA.OOPSOne;
 
 public class Polynomial {
     private int poly[];
-
     public int getCoefficient(int degree) {
         if(degree<poly.length){
             return this.poly[degree];
@@ -11,11 +10,10 @@ public class Polynomial {
             return 0;
         }
     }
-
     public Polynomial(){
         poly = new int[10];
     }
-    public void setCoefficient(int degree, int coeff){
+    public void setCoefficient(int degree, int coefficient){
         if(degree>= poly.length-1){
             int temp[] = poly;
             poly = new int[degree+1];
@@ -23,10 +21,8 @@ public class Polynomial {
                 poly[i] = temp[i];
             }
         }
-        poly[degree] = coeff;
+        poly[degree] = coefficient;
     }
-
-
     public void print() {
         for(int i = 0;i<poly.length;i++){
             if(poly[i]!=0){
@@ -35,7 +31,6 @@ public class Polynomial {
         }
             System.out.println();
     }
-
     public Polynomial add(Polynomial p) {
         int len = Math.min(this.poly.length, p.poly.length);
         Polynomial result = new Polynomial();
@@ -78,7 +73,7 @@ public class Polynomial {
                 int index = i+j;
                 int mulCoefficient = this.poly[i]*p.poly[j];
                 int preCoefficient = result.getCoefficient(index);
-                result.setCoefficient(i+j,mulCoefficient+preCoefficient);
+                result.setCoefficient(index,mulCoefficient+preCoefficient);
             }
         }
         return result;
@@ -86,12 +81,9 @@ public class Polynomial {
     public int evaluate(int number) {
         int sum  = 0;
         for(int i=0;i<this.poly.length;i++){
-            int coeff = this.getCoefficient(i);
-            int power=1;
-            for(int j=i;j>=1;j--){
-                power = power*number;
-            }
-            sum+=coeff*power;
+            int coefficients = this.getCoefficient(i);
+            int power = (int) Math.pow(number,i);
+            sum+=coefficients*power;
         }
         return sum;
     }
