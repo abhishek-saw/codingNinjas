@@ -68,12 +68,12 @@ public class Polynomial {
     }
     public Polynomial multiply(Polynomial p) {
         Polynomial result = new Polynomial();
-        for(int i =0;i<this.poly.length;i++){
-            for(int j=0;j<p.poly.length;j++){
-                int index = i+j;
-                int mulCoefficient = this.poly[i]*p.poly[j];
-                int preCoefficient = result.getCoefficient(index);
-                result.setCoefficient(index,mulCoefficient+preCoefficient);
+        for(int i =0;i<this.poly.length;i++){ // for first polynomial
+            for(int j=0;j<p.poly.length;j++){ // for second polynomial
+                int index = i+j; // for getting the index of the polynomial after multiply
+                int mulCoefficient = this.poly[i]*p.poly[j];  //finding the after multiply coefficient
+                int preCoefficient = result.getCoefficient(index); // find the previous coefficient if any present otherwise it will be zero
+                result.setCoefficient(index,mulCoefficient+preCoefficient); // using the setCoefficient formula
             }
         }
         return result;

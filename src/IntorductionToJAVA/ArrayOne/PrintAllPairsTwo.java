@@ -1,4 +1,4 @@
-package IntorductionToJAVA.e_ArrayOne;
+package IntorductionToJAVA.ArrayOne;
 
 public class PrintAllPairsTwo {
     public static void main(String[] args) {
