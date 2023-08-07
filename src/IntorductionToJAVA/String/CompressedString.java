@@ -18,13 +18,12 @@ public class CompressedString {
                 if(count==1) {
                     answer = answer + str.charAt(i);
                     index += 1;
-                    count = 1;
                 }
                 else{
                     answer = answer + count + str.charAt(i);
                     index += 2;
-                    count = 1;
                 }
+                count = 1;
             }
             else{
                 count++;
