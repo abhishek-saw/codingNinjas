@@ -12,5 +12,6 @@ public class SumOfDigits {
             return 0;
         }
         return  input%10 +  sumOfDigits(input/10);
+
     }
 }
