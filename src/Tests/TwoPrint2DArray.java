@@ -1,4 +1,4 @@
-package IntorductionToJAVA.Tests;
+package Tests;
 
 public class TwoPrint2DArray {
     public static void main(String[] args) {

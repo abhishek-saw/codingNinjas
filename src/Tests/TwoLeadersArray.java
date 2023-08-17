@@ -1,4 +1,4 @@
-package IntorductionToJAVA.Tests;
+package Tests;
 
 public class TwoLeadersArray {
     public static void main(String[] args) {

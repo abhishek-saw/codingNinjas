@@ -1,4 +1,4 @@
-package IntorductionToJAVA.Tests;
+package Tests;
 
 import java.util.Scanner;
 

@@ -1,4 +1,4 @@
-package IntorductionToJAVA.Tests;
+package Tests;
 
 public class OneNinjaPuzzle {
     public static void main(String[] args) {
