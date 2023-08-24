@@ -1,6 +1,6 @@
 package DSAInJAVA.OOPSOne;
 
-import DSAInJAVA.OOPSTwo.DivideByZeroException;
+import DSAInJAVA.OOPSTwoThree.DivideByZeroException;
 
 public class Fraction {
     private int numerator;

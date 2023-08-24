@@ -1,11 +1,18 @@
-package DSAInJAVA.OOPSTwo;
+package DSAInJAVA.OOPSTwoThree;
 
 import java.util.Scanner;
 
 //polymorphism
 public class VehicleUse3 {
+
     public static void main(String[] args) {
-        Vehicle v1 = new Car(4, 100); //Every Car is a Vehicle
+        Vehicle v1 = new Car(4, 100) {
+            @Override
+            public String getCompany() {
+                return null;
+            }
+        };
+        //Every Car is a Vehicle
         v1.maxSpeed = 200;
         System.out.println(v1.getColour());
         v1.print(); // Car print called due to Runtime Polymorphism
@@ -15,7 +22,12 @@ public class VehicleUse3 {
 
         System.out.println();
 
-        Vehicle v2 = new Bicycle(); //Every Bicycle is a Vehicle
+        Vehicle v2 = new Bicycle() {
+            @Override
+            public String getCompany() {
+                return null;
+            }
+        }; //Every Bicycle is a Vehicle
 
         System.out.println();
 
@@ -25,10 +37,26 @@ public class VehicleUse3 {
         Scanner s = new Scanner(System.in);
         int n = s.nextInt();
         if (n < 10) {
-            v3 = new Car(2, 300);
+            v3 = new Car(2, 300) {
+                @Override
+                public String getCompany() {
+                    return null;
+                }
+            };
         }
         else{
-            v3 = new Vehicle();
+            v3 = new Vehicle() {
+
+                @Override
+                public boolean isMotorized() {
+                    return false;
+                }
+
+                @Override
+                public String getCompany() {
+                    return null;
+                }
+            };
         }
         v3.print();
 //        v3.maxSpeed; Same issue as v1.numDoors Compile time polymorphism

@@ -1,8 +1,8 @@
 package DSAInJAVA.OOPSOne;
 
-import DSAInJAVA.OOPSTwo.Vehicle;
+import DSAInJAVA.OOPSTwoThree.Vehicle;
 
-public class Truck extends Vehicle {
+public abstract class Truck extends Vehicle {
     int maxLoadingCapacity;
 
     public Truck(int maxSpeed) {
@@ -15,4 +15,10 @@ public class Truck extends Vehicle {
         System.out.println("MaxSpeed "+maxSpeed+" "); //protected not private hence accessible, derived class
         System.out.println("MaxLoadingCapacity "+maxLoadingCapacity);
     }
-}
+    //abstract methods
+//    @Override
+//    public boolean isMotorized() {
+//        return true;
+//    }
+//
+ }

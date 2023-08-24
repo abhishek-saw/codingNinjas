@@ -1,4 +1,4 @@
-package DSAInJAVA.OOPSTwo;
+package DSAInJAVA.OOPSTwoThree;
 
 public class FinallyTryCatch {
     public static void main(String[] args) {

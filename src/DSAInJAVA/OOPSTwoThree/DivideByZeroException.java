@@ -1,4 +1,4 @@
-package DSAInJAVA.OOPSTwo;
+package DSAInJAVA.OOPSTwoThree;
 
 public class DivideByZeroException extends Exception{
 

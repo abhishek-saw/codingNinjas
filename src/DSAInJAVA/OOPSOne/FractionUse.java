@@ -1,6 +1,6 @@
 package DSAInJAVA.OOPSOne;
 
-import DSAInJAVA.OOPSTwo.DivideByZeroException;
+import DSAInJAVA.OOPSTwoThree.DivideByZeroException;
 
 import static DSAInJAVA.OOPSOne.Fraction.addition;
 

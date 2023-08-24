@@ -1,8 +1,6 @@
-package DSAInJAVA.OOPSTwo;
+package DSAInJAVA.OOPSTwoThree;
 
 import DSAInJAVA.OOPSOne.Student;
-
-import java.util.Scanner;
 
 //class of studentUse is created
 public class StudentUse2 {
