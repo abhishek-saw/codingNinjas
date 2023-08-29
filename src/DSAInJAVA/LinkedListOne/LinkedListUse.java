@@ -1,4 +1,4 @@
-package DSAInJAVA.LinkedList;
+package DSAInJAVA.LinkedListOne;
 
 public class LinkedListUse {
     public static Node<Integer> createLinkedList() {

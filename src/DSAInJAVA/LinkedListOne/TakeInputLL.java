@@ -1,9 +1,8 @@
-package DSAInJAVA.LinkedList;
+package DSAInJAVA.LinkedListOne;
 
-import java.util.LinkedList;
 import java.util.Scanner;
 
-import static DSAInJAVA.LinkedList.LinkedListUse.printLinkedList;
+import static DSAInJAVA.LinkedListOne.LinkedListUse.printLinkedList;
 
 public class TakeInputLL {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package DSAInJAVA.LinkedList;
+package DSAInJAVA.LinkedListOne;
 
 public class LengthLL {
     public static void main(String[] args) {

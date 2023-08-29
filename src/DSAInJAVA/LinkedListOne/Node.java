@@ -1,4 +1,4 @@
-package DSAInJAVA.LinkedList;
+package DSAInJAVA.LinkedListOne;
 
 public class Node<T> {
     T data;

@@ -1,6 +1,4 @@
-package DSAInJAVA.LinkedList;
-
-import static DSAInJAVA.LinkedList.LinkedListUse.printLinkedList;
+package DSAInJAVA.LinkedListOne;
 
 public class PalindromeLL {
     public static void main(String[] args) {

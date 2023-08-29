@@ -1,6 +1,4 @@
-package DSAInJAVA.LinkedList;
-
-import java.util.ArrayList;
+package DSAInJAVA.LinkedListOne;
 
 public class PrintReverseLL {
     public static void main(String[] args) {
