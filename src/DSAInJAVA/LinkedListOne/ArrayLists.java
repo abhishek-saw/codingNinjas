@@ -24,15 +24,11 @@ public class ArrayLists {
             System.out.print(arr.get(i) + " ");
         }
         System.out.println();
-
         // For each loop or Enhanced for loop
         // for each element in arr and above was travelling over the induces of the arr
         for(int i : arr){
             System.out.print(i +" ");
         }
-
-
-
         ArrayList<String> list = new ArrayList<>() ;
         list.add( "apple" );
         list.add( "banana" );
@@ -41,7 +37,5 @@ public class ArrayLists {
         list.add( 0, "mango" );
         System.out.println(list.get(3));
         System.out.println(list.size());
-
-
     }
 }
