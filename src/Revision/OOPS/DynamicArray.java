@@ -1,4 +1,4 @@
-package Revision;
+package Revision.OOPS;
 
 public class DynamicArray {
     private int [] arr ;

@@ -1,4 +1,4 @@
-package Revision;
+package Revision.OOPS;
 
 public class ComplexUse {
     public static void main(String[] args) {

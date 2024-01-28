@@ -1,4 +1,4 @@
-package Revision;
+package Revision.OOPS;
 
 public class VehicleUse {
     public static void main(String[] args) {

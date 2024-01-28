@@ -1,6 +1,5 @@
-package RevisionTwo;
+package Revision.OOPS;
 
-import Revision.Vehicle;
 
 public class Truck extends Vehicle {
     int maxLoadingCapacity;
