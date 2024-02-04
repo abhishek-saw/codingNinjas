@@ -4,8 +4,8 @@ import IntorductionToJAVA.ArrayOne.TakeInputAndPrint;
 
 public class SeparateNegativeAndPositive {
     public static void main(String[] args) {
-        int arr [] = {1,-4,-2,5,3};
-        int answer[] = separateNegativeAndPositive(arr);
+        int[] arr = {1,-4,-2,5,3};
+        int[] answer = separateNegativeAndPositive(arr);
         TakeInputAndPrint.printArray(answer);
     }
     // This can be done for all cases where we need only specific number to changed

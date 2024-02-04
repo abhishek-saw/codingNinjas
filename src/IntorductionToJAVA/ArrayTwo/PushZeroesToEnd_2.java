@@ -2,7 +2,7 @@ package IntorductionToJAVA.ArrayTwo;
 import IntorductionToJAVA.ArrayOne.TakeInputAndPrint;
 public class PushZeroesToEnd_2 {
     public static void main(String[] args) {
-        int arr [] = {2,0,0,1,3,0,0};
+        int[] arr = {2,0,0,1,3,0,0};
         pushZeroesToEnd(arr);
         TakeInputAndPrint.printArray(arr);
     }

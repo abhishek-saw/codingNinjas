@@ -2,13 +2,13 @@ package IntorductionToJAVA.ArrayTwo;
 
 public class ArrayRotateCheck {
     public static void main(String[] args) {
-        int arr1[] = {5,6,1,2,3,4};
+        int[] arr1 = {5,6,1,2,3,4};
         int answer1 = arrayRotateCheck(arr1);
         System.out.println(answer1);
-        int arr2[] = {10,20,30,1};
+        int[] arr2 = {10,20,30,1};
         int answer2 = arrayRotateCheck(arr2);
         System.out.println(answer2);
-        int arr3[] = {};
+        int[] arr3 = {};
         int answer3 = arrayRotateCheck(arr3);
         System.out.println(answer3);
     }

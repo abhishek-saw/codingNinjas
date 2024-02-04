@@ -42,17 +42,17 @@ public class RotateArrayInPlace {
         return a;
     }
     public static void main(String[] args) {
-        int arr1 [] = {1,2,3,4,5};
+        int[] arr1 = {1,2,3,4,5};
         int x1 = 1;
         String dir1 = "LEFT";
-        int answer1[] = rotateArray(arr1,x1,dir1);
+        int[] answer1 = rotateArray(arr1,x1,dir1);
         TakeInputAndPrint.printArray(answer1);
         System.out.println();
 
-        int arr2 [] = {1,2,3,4,5};
+        int[] arr2 = {1,2,3,4,5};
         int x2 = 1;
         String dir2 = "RIGHT";
-        int answer2[] = rotateArray(arr2,x2,dir2);
+        int[] answer2 = rotateArray(arr2,x2,dir2);
         TakeInputAndPrint.printArray(answer2);
     }
 }
