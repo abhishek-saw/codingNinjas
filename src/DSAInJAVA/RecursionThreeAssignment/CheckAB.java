@@ -6,11 +6,11 @@ public class CheckAB {
         System.out.print(checkAB(input));
     }
 private static boolean checkAB(String input) {
-        if(input.length()==0){
+        if(input.isEmpty()){
             return true;
         }
         if(input.charAt(0)=='a') {
-            if (input.substring(1).length() > 1 && input.substring(1, 3).equals("bb")) {
+            if (input.substring(1).length() > 1 && input.startsWith("bb", 1)) {
                 return checkAB(input.substring(3));
             } else {
                 return checkAB(input.substring(1));

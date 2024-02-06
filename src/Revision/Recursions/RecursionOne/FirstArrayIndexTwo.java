@@ -1,4 +1,4 @@
-package Revision.Recursion;
+package Revision.Recursions.RecursionOne;
 
 public class FirstArrayIndexTwo {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package Revision.Recursion;
+package Revision.Recursions.RecursionOne;
 
 public class CheckNumber {
     public static void main(String[] args) {
@@ -15,9 +15,7 @@ public class CheckNumber {
             return true;
         }
         int [] smallArray = new int[input.length-1];
-        for(int i =0;i<smallArray.length;i++){
-            smallArray[i] = input[i+1];
-        }
+        System.arraycopy(input, 1, smallArray, 0, smallArray.length);
         return checkNumber(smallArray,x);
     }
 }

@@ -7,7 +7,7 @@ public class BinarySearchR {
         int result = binarySearch(numb, target, 0, numb.length - 1);
         System.out.println(result);
     }
-    private static int binarySearch(int arr[], int x, int s, int e) {
+    private static int binarySearch(int[] arr, int x, int s, int e) {
         int mid = (s + e) / 2;
         if (s > e) {
             return -1;

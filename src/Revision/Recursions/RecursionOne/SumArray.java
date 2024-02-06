@@ -1,4 +1,4 @@
-package Revision.Recursion;
+package Revision.Recursions.RecursionOne;
 
 public class SumArray {
     public static void main(String[] args) {
@@ -11,9 +11,7 @@ public class SumArray {
             return 0;
         }
         int [] smallArray = new int[input.length-1];
-        for(int i =0;i< smallArray.length;i++){
-            smallArray[i] = input[i+1];
-        }
+        System.arraycopy(input, 1, smallArray, 0, smallArray.length);
         return input[0] + sum(smallArray);
     }
 }

@@ -5,8 +5,6 @@ public class RemoveDuplicatesR {
         System.out.println(removeDuplicates("aaabccaaa"));
         System.out.println(removeDuplicates("tadayutaysgcgtttggytytyyyikk"));
         System.out.println(removeDuplicates("CCooddiinnggNNiinnnnjjjjaaaassss"));
-
-
     }
 
     private static String removeDuplicates(String s) {

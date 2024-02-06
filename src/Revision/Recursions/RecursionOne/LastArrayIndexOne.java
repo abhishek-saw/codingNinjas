@@ -1,4 +1,4 @@
-package Revision.Recursion;
+package Revision.Recursions.RecursionOne;
 
 public class LastArrayIndexOne {
     public static void main(String[] args) {
@@ -16,9 +16,7 @@ public class LastArrayIndexOne {
             return input.length-1;
         }
         int [] smallArray = new int[input.length-1];
-        for(int i =0;i<smallArray.length;i++){
-            smallArray[i] = input[i];
-        }
+        System.arraycopy(input, 0, smallArray, 0, smallArray.length);
         return lastIndex(smallArray,x);
     }
 }

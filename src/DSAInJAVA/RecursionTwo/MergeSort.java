@@ -17,20 +17,10 @@ public class MergeSort {
             return;
         }
         int mid = (l+r)/2;
-        int arr1[] = new int[mid];
-        int arr2[] = new int[arr.length-arr1.length];
-
-        for(int i = 0;i<mid;i++){
-            arr1[i] = arr[i];
-        }
-        for(int j = 0;j<arr2.length;j++){
-            arr2[j] = arr[arr1.length+j];
-        }
-//        System.out.println();
-//        printArray(arr1);
-//        System.out.println();
-//        printArray(arr2);
-
+        int[] arr1 = new int[mid];
+        int[] arr2 = new int[arr.length-arr1.length];
+        System.arraycopy(arr, 0, arr1, 0, mid);
+        System.arraycopy(arr, arr1.length, arr2, 0, arr2.length);
         mergesort(arr1,0, arr1.length);
         mergesort(arr2,0, arr2.length);
         merge(arr1,arr2,arr);
