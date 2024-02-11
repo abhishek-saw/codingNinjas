@@ -1,6 +1,6 @@
-package DSAInJAVA.LinkedList.LinkedListOne;
+package DSAInJAVA.LinkedList.LinkedListOneTwo;
 
-import static DSAInJAVA.LinkedList.LinkedListOne.LinkedListUse.printLinkedList;
+import static DSAInJAVA.LinkedList.LinkedListOneTwo.LinkedListUse.printLinkedList;
 
 public class EliminateDuplicates {
     public static void main(String[] args) {

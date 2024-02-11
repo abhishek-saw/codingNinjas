@@ -1,4 +1,4 @@
-package DSAInJAVA.LinkedList.LinkedListOne;
+package DSAInJAVA.LinkedList.LinkedListOneTwo;
 
 public class FindNode {
         public static void main(String[] args) {

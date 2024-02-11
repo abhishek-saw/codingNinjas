@@ -1,4 +1,4 @@
-package DSAInJAVA.LinkedList.LinkedListOne;
+package DSAInJAVA.LinkedList.LinkedListOneTwo;
 
 public class PalindromeLL {
     public static void main(String[] args) {

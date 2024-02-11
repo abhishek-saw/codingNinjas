@@ -1,8 +1,8 @@
-package DSAInJAVA.LinkedList.LinkedListOne;
+package DSAInJAVA.LinkedList.LinkedListOneTwo;
 
 import java.util.Scanner;
 
-import static DSAInJAVA.LinkedList.LinkedListOne.LinkedListUse.printLinkedList;
+import static DSAInJAVA.LinkedList.LinkedListOneTwo.LinkedListUse.printLinkedList;
 
 public class TakeInputLL {
     public static void main(String[] args) {
@@ -38,7 +38,7 @@ public class TakeInputLL {
     }
 
     // TIME COMPLEXITY IS O(N)
-    private static Node<Integer> takeInputOptimized() {
+    public static Node<Integer> takeInputOptimized() {
         Scanner s = new Scanner(System.in);
         int data  = s.nextInt();
         Node<Integer> head = null;

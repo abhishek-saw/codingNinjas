@@ -3,6 +3,7 @@ package Revision.TimeComplexity;
 
 public class TripleSum {
     public static void main(String[] args) {
+        //TODO
         int[] arr = {6,1,1,4,6,5,3,2};
         int num = 6;
         System.out.println(tripleSum(arr, num));
