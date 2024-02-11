@@ -3,6 +3,8 @@ import static IntorductionToJAVA.ArrayOne.TakeInputAndPrint.printArray;
 
 public class MergeSort {
     public static void main(String[] args) {
+        // Time Complexity : O(nlogn) (Worst Case : O(n^2)
+        // Space Complexity : O(n)
         int[] arr = {10, 121, 12, 33, 24, 65, 6};
         int l = 0;
         int r = arr.length-1;

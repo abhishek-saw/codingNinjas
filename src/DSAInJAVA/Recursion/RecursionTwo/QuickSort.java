@@ -4,6 +4,9 @@ import static IntorductionToJAVA.ArrayOne.TakeInputAndPrint.printArray;
 
 public class QuickSort {
     public static void main(String[] args) {
+        // Time Complexity : O(nlogn) (Worst Case : O(n^2) S
+        // Space Complexity : O(logn)
+
         int[] arr = {10, 121, 12, 33, 24, 65, 6};
         int s = 0;
         int e = arr.length-1;

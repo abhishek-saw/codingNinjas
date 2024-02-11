@@ -4,7 +4,7 @@ public class Student2{
     public String name;
     final private int rollNumber;
     double cgpa;
-    final static double converisonFactor= 0.95;
+    final static double conversionFactor = 0.95;
     private static int numStudents;
 
     public Student2(String name){

@@ -6,8 +6,10 @@ import static DSAInJAVA.LinkedList.LinkedListOne.LinkedListUse.printLinkedList;
 
 public class TakeInputLL {
     public static void main(String[] args) {
-        Node<Integer> head = takeInputOptimized();
-        printLinkedList(head);
+        Node<Integer> head1 = takeInput();
+        printLinkedList(head1);
+        Node<Integer> head2 = takeInputOptimized();
+        printLinkedList(head2);
     }
 
     // TIME COMPLEXITY IS O(N^2)

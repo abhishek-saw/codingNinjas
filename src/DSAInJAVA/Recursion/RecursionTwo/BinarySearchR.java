@@ -2,6 +2,7 @@ package DSAInJAVA.Recursion.RecursionTwo;
 
 public class BinarySearchR {
     public static void main(String[] args) {
+        // Time Complexity : O(logn)
         int[] numb = {0, 1, 2, 3, 4, 5, 6};
         int target = 6;
         int result = binarySearch(numb, target, 0, numb.length - 1);

@@ -13,9 +13,6 @@ public class LinkedListUse {
         System.out.println("n2 : " +n2 + " data : " + n2.data + " next" + n2.next);
         System.out.println("n3 : " +n3 + " data : " + n3.data + " next" + n3.next);
         System.out.println("n4 : " +n4 + " data : " + n4.data + " next" + n4.next);
-
-        printLinkedList(n1);
-//        printLinkedList(n1);
         return n1;
     }
 
@@ -40,6 +37,7 @@ public class LinkedListUse {
         System.out.println(n1); // reference of the node
         System.out.println(n1.data);
         System.out.println(n1.next);
-        createLinkedList();
+        Node<Integer> head = createLinkedList();
+        printLinkedList(head);
     }
 }

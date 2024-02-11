@@ -42,7 +42,7 @@ public class StudentUse {
 
         Student2 s7 = new Student2("Student2Three");
         System.out.println("s7 : " + s7);
-        System.out.println(s7.name+ " " + s7.getRollNumber() + " " + Student2.getNumStudents() + " " + Student2.converisonFactor);
+        System.out.println(s7.name+ " " + s7.getRollNumber() + " " + Student2.getNumStudents() + " " + Student2.conversionFactor);
 
     }
 }

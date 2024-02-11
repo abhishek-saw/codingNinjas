@@ -1,4 +1,4 @@
-package DSAInJAVA.TimeComplexity;
+package Revision.TimeComplexity;
 
 
 public class TripleSum {
@@ -49,47 +49,47 @@ public class TripleSum {
                 numPair += (totalElementsFromStart * totalElementsFromEnd);
                 startIndex = tempStartIndex;
                 endIndex = tempEndIndex;
-                }
             }
-            return numPair;
         }
-        public static void mergedSort ( int[] arr, int s, int e){
-            if (arr.length == 1) {
-                return;
-            }
-            int[] m = new int[(s + e) / 2];
-            int[] n = new int[arr.length - m.length];
+        return numPair;
+    }
+    public static void mergedSort ( int[] arr, int s, int e){
+        if (arr.length == 1) {
+            return;
+        }
+        int[] m = new int[(s + e) / 2];
+        int[] n = new int[arr.length - m.length];
 
-            System.arraycopy(arr, 0, m, 0, m.length);
-            System.arraycopy(arr, m.length, n, 0, n.length);
-            mergedSort(m, 0, m.length);
-            mergedSort(n, 0, n.length);
-            merged(m, n, arr);
-        }
-        private static void merged( int[] m, int[] n, int[] arr){
-            int i = 0;
-            int j = 0;
-            int k = 0;
-            while (i < m.length && j < n.length) {
-                if (m[i] < n[j]) {
-                    arr[k] = m[i];
-                    k++;
-                    i++;
-                } else {
-                    arr[k] = n[j];
-                    k++;
-                    j++;
-                }
-            }
-            while (i < m.length) {
+        System.arraycopy(arr, 0, m, 0, m.length);
+        System.arraycopy(arr, m.length, n, 0, n.length);
+        mergedSort(m, 0, m.length);
+        mergedSort(n, 0, n.length);
+        merged(m, n, arr);
+    }
+    private static void merged( int[] m, int[] n, int[] arr){
+        int i = 0;
+        int j = 0;
+        int k = 0;
+        while (i < m.length && j < n.length) {
+            if (m[i] < n[j]) {
                 arr[k] = m[i];
                 k++;
                 i++;
-            }
-            while (j < n.length) {
+            } else {
                 arr[k] = n[j];
                 k++;
                 j++;
             }
         }
+        while (i < m.length) {
+            arr[k] = m[i];
+            k++;
+            i++;
+        }
+        while (j < n.length) {
+            arr[k] = n[j];
+            k++;
+            j++;
+        }
+    }
 }
