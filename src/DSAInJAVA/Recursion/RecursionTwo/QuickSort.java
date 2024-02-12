@@ -1,6 +1,6 @@
 package DSAInJAVA.Recursion.RecursionTwo;
 
-import static IntorductionToJAVA.ArrayOne.TakeInputAndPrint.printArray;
+import static IntroductionToJAVA.ArrayOne.TakeInputAndPrint.printArray;
 
 public class QuickSort {
     public static void main(String[] args) {

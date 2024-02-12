@@ -1,6 +1,6 @@
 package DSAInJAVA.TimeComplexity;
 
-import IntorductionToJAVA.ArrayOne.TakeInputAndPrint;
+import IntroductionToJAVA.ArrayOne.TakeInputAndPrint;
 
 public class ArrayIntersectionOne {
     public static void main(String[] args) {

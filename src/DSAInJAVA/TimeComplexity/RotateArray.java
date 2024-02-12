@@ -1,6 +1,6 @@
 package DSAInJAVA.TimeComplexity;
 
-import IntorductionToJAVA.ArrayOne.TakeInputAndPrint;
+import IntroductionToJAVA.ArrayOne.TakeInputAndPrint;
 
 public class RotateArray {
     public static void main(String[] args) {
