@@ -44,8 +44,9 @@ public class TakeInputLL {
                 head = currentNode;
                 tail = currentNode;
             }
-            tail.next = currentNode;
+            else{tail.next = currentNode;
             tail = currentNode; //tail.next
+                }
             data = s.nextInt();
         }
         return head;

@@ -1,9 +1,8 @@
-package Revision.LinkedListOne;
+package DSAInJAVA.LinkedList.LinkedListOne;
 
-import java.util.Objects;
 
-import static Revision.LinkedListOne.LinkedListUse.printLinkedList;
-import static Revision.LinkedListOne.TakeInputLL.takeInputOptimized;
+import static DSAInJAVA.LinkedList.LinkedListOne.LinkedListUse.printLinkedList;
+import static DSAInJAVA.LinkedList.LinkedListOne.TakeInputLL.takeInputOptimized;
 
 public class IsPalindrome {
     public static void main(String[] args) {
