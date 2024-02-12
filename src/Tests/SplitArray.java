@@ -1,7 +1,5 @@
 package Tests;
 
-import IntorductionToJAVA.ArrayOne.TakeInputAndPrint;
-
 public class SplitArray {
     public static void main(String[] args) {
         int input [] = {4,3,1};
