@@ -2,6 +2,8 @@ package DSAInJAVA.Stacks;
 
 
 public class StackUsingArray {
+    private int[] data;
+    public int topIndex;
     public StackUsingArray(){
         data = new int[10];
         topIndex = -1;
@@ -42,6 +44,4 @@ public class StackUsingArray {
         // Time Complexity : O(1)
         return topIndex == -1;
     }
-    private int[] data;
-    public int topIndex;
 }

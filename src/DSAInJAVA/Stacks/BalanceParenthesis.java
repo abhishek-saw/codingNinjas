@@ -1,6 +1,5 @@
 package DSAInJAVA.Stacks;
 
-import java.util.Objects;
 import java.util.Stack;
 
 public class BalanceParenthesis {
