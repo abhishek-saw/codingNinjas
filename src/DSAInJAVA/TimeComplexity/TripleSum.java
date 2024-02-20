@@ -3,8 +3,9 @@ package DSAInJAVA.TimeComplexity;
 
 public class TripleSum {
     public static void main(String[] args) {
-        int[] arr = {6,1,1,4,6,5,3,2};
-        int num = 6;
+        //TODO
+        int[] arr = {6,1,6,5,3,2,5,0,5,6,0};
+        int num = 5;
         System.out.println(tripleSum(arr, num));
     }
     private static int tripleSum(int[] arr, int num) {
@@ -12,47 +13,51 @@ public class TripleSum {
             return 0;
         }
         mergedSort(arr, 0, arr.length - 1);
-        int n = arr.length;
         int numTriplets = 0;
-        for (int i = 0; i < n; i++) {
-            int pairSumFor = num - arr[i];
-            int numPairs = pairSum(arr, (i + 1), (n - 1), pairSumFor);
-            numTriplets += numPairs;
+        for(int i =0;i<arr.length;i++){
+            int pairSumFor = num-arr[i];
+            int count = pairSum(arr,(i+1),(arr.length-1),pairSumFor);
+            numTriplets+=count;
         }
         return numTriplets;
     }
     private static int pairSum(int[] arr, int startIndex, int endIndex, int num) {
-        int numPair = 0;
-        while (startIndex < endIndex) {
-            if (arr[startIndex] + arr[endIndex] < num) {
-                startIndex++;
-            } else if (arr[startIndex] + arr[endIndex] > num) {
-                endIndex--;
-            } else {
-                int elementAtStart = arr[startIndex];
-                int elementAtEnd = arr[endIndex];
-                if (elementAtStart == elementAtEnd) {
-                    int totalElementsFromStartToEnd = (endIndex - startIndex) + 1;
-                    numPair += (totalElementsFromStartToEnd * (totalElementsFromStartToEnd - 1) / 2);
-                    return numPair;
-                }
-                int tempStartIndex = startIndex + 1;
-                int tempEndIndex = endIndex - 1;
-                while (tempStartIndex <= tempEndIndex && arr[tempStartIndex] == elementAtStart) {
-                    tempStartIndex += 1;
-                }
-                while (tempEndIndex >= tempStartIndex && arr[tempEndIndex] == elementAtEnd) {
-                    tempEndIndex -= 1;
-                }
-                int totalElementsFromStart = (tempStartIndex - startIndex);
-                int totalElementsFromEnd = (endIndex - tempEndIndex);
-                numPair += (totalElementsFromStart * totalElementsFromEnd);
-                startIndex = tempStartIndex;
-                endIndex = tempEndIndex;
-                }
-            }
-            return numPair;
+        if (arr.length == 0) {
+            return 0;
         }
+        int numPairs = 0;
+        int left = startIndex;
+        int right = endIndex;
+        while (left < right) {
+            if (arr[left] + arr[right] > num) {
+                right--;
+            } else if (arr[left] + arr[right] < num) {
+                left++;
+            } else {
+                int leftElement = arr[left];
+                int rightElement = arr[right];
+                if (leftElement == rightElement) {
+                    int countPairs = (right - left) + 1;
+                    numPairs += (countPairs * (countPairs - 1) / 2);
+                    return numPairs;
+                }
+                int tempLeft = left;
+                int tempRight = right;
+                while (tempLeft <= tempRight && arr[tempLeft] == leftElement) {
+                    tempLeft++;
+                }
+                while (tempRight >= tempLeft && arr[tempRight] == rightElement) {
+                    tempRight--;
+                }
+                int countLeft = tempLeft - left;
+                int countRight = right - tempRight;
+                numPairs += (countLeft * countRight);
+                left = tempLeft;
+                right = tempRight;
+            }
+        }
+        return numPairs;
+    }
         public static void mergedSort ( int[] arr, int s, int e){
             if (arr.length == 1) {
                 return;

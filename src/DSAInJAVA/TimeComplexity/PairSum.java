@@ -2,90 +2,88 @@ package DSAInJAVA.TimeComplexity;
 
 public class PairSum {
     public static void main(String[] args) {
-        int[] arr = {1,3,6,2,5,4,3,2,4};
-        int num = 7;
-        System.out.println(pairSum(arr,num));
+        int[] arr = {1, 3, 6, 2, 5, 4, 3, 2, 4, 5};
+        int num = 8;
+        System.out.println(pairSum(arr, num));
 
     }
+
     private static int pairSum(int[] arr, int num) {
-        if(arr.length==0){
+        if (arr.length == 0) {
             return 0;
         }
-        mergedSort(arr,0,arr.length-1);
-        int startIndex = 0;
-        int endIndex = (arr. length - 1);
-        int numPair = 0;
-        while (startIndex < endIndex) {
-            if (arr[startIndex] + arr[endIndex] < num) {
-                startIndex++;
-            } else if (arr[startIndex] + arr[endIndex] > num) {
-                endIndex--;
+        mergedSort(arr, 0, arr.length - 1);
+        int numPairs = 0;
+        int leftIndex = 0;
+        int rightIndex = arr.length - 1;
+        while (leftIndex <= rightIndex) {
+            if (arr[leftIndex] + arr[rightIndex] > num) {
+                rightIndex--;
+            } else if (arr[leftIndex] + arr[rightIndex] < num) {
+                leftIndex++;
             } else {
-                int elementAtStart = arr[startIndex];
-                int elementAtEnd = arr[endIndex];
-
-                if (elementAtStart == elementAtEnd) {
-                    int totalElementsFromStartToEnd = (endIndex - startIndex) + 1;
-                    numPair += (totalElementsFromStartToEnd * (totalElementsFromStartToEnd - 1) / 2);
-                    return numPair;
+                int elementAtLeft = arr[leftIndex];
+                int elementAtRight = arr[rightIndex];
+                if (elementAtLeft == elementAtRight) { // may be adjacent for same numbers in between
+                    int equalPairsCount = rightIndex - leftIndex + 1;
+                    numPairs += (equalPairsCount) * (equalPairsCount - 1) / 2; // (n)(n-1)/2
                 }
-                int tempStartIndex = startIndex + 1;
-                int tempEndIndex = endIndex;
-                while (tempStartIndex <= tempEndIndex && arr[tempStartIndex] == elementAtStart) {
-                    tempStartIndex += 1;
+                int tempLeftIndex = leftIndex;
+                int tempRightIndex = rightIndex;
+                while (tempLeftIndex <= tempRightIndex && arr[tempLeftIndex] == elementAtLeft) {
+                    tempLeftIndex++;
                 }
-                while (tempEndIndex >= tempStartIndex && arr[tempEndIndex] == elementAtEnd) {
-                    tempEndIndex -= 1;
+                while (tempLeftIndex <= tempRightIndex && arr[tempRightIndex] == elementAtRight) {
+                    tempRightIndex--;
                 }
-                int totalElementsFromStart = (tempStartIndex - startIndex);
-                int totalElementsFromEnd = (endIndex - tempEndIndex);
-                numPair += (totalElementsFromStart * totalElementsFromEnd);
-                startIndex = tempStartIndex;
-                endIndex = tempEndIndex;
+                int countSameLeft = tempLeftIndex - leftIndex;
+                int countSameRight = rightIndex - tempRightIndex;
+                numPairs += countSameRight * countSameLeft;
+                leftIndex = tempLeftIndex;
+                rightIndex = tempRightIndex;
             }
         }
-        return numPair;
+        return numPairs;
+    }
+    public static void mergedSort(int[] arr, int s, int e) {
+        if(arr.length==1){
+            return;
         }
+        int [] m = new int[(s+e)/2];
+        int [] n = new int[arr.length - m.length];
 
-        public static void mergedSort(int[] arr, int s, int e) {
-            if(arr.length==1){
-                return;
-            }
-            int [] m = new int[(s+e)/2];
-            int [] n = new int[arr.length - m.length];
-
-            System.arraycopy(arr, 0, m, 0, m.length);
-            System.arraycopy(arr, m.length, n, 0, n.length);
-            mergedSort(m,0,m.length);
-            mergedSort(n,0,n.length);
-            merged(m,n,arr);
-        }
-        private static void merged(int[] m, int[] n, int[] arr) {
-            int i = 0 ;
-            int j = 0 ;
-            int k = 0 ;
-            while(i<m.length && j<n.length){
-                if(m[i]<n[j]){
-                    arr[k] = m[i];
-                    k++;
-                    i++;
-                }
-                else{
-                    arr[k] = n[j];
-                    k++;
-                    j++;
-                }
-            }
-            while(i<m.length){
+        System.arraycopy(arr, 0, m, 0, m.length);
+        System.arraycopy(arr, m.length, n, 0, n.length);
+        mergedSort(m,0,m.length);
+        mergedSort(n,0,n.length);
+        merged(m,n,arr);
+    }
+    private static void merged(int[] m, int[] n, int[] arr) {
+        int i = 0 ;
+        int j = 0 ;
+        int k = 0 ;
+        while(i<m.length && j<n.length){
+            if(m[i]<n[j]){
                 arr[k] = m[i];
                 k++;
                 i++;
             }
-            while (j < n.length) {
+            else{
                 arr[k] = n[j];
                 k++;
                 j++;
             }
         }
+        while(i<m.length){
+            arr[k] = m[i];
+            k++;
+            i++;
+        }
+        while (j < n.length) {
+            arr[k] = n[j];
+            k++;
+            j++;
+        }
     }
+}
 
