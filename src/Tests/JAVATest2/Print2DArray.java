@@ -1,6 +1,6 @@
-package Tests;
+package Tests.JAVATest2;
 
-public class TwoPrint2DArray {
+public class Print2DArray {
     public static void main(String[] args) {
         int[][] arr2d={{1,2,3},{5,6,7},{9,10,11}};
         twoPrint2DArray(arr2d);

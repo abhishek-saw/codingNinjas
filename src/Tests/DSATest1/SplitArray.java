@@ -1,4 +1,4 @@
-package Tests;
+package Tests.DSATest1;
 
 public class SplitArray {
     public static void main(String[] args) {

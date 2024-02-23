@@ -1,6 +1,6 @@
-package Tests;
+package Tests.JAVATest2;
 
-public class TwoLeadersArray {
+public class LeadersArray {
     public static void main(String[] args) {
         int[]arr = {13,17,5,4,6};
         int[]input = {3,12,34,2,0,-1};

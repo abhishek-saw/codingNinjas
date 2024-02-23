@@ -1,6 +1,6 @@
-package Tests;
+package Tests.JAVATest2;
 
-public class TwoMinLengthWord {
+public class MinLengthWord {
     public static void main(String[] args) {
         String str = "Welcome to Codiiiing Ninjas";
         String str2 = "bfwefewff lde2d123d owefwefqwefwefweqf ued2d23d jhjhjh jkjkjkjk ioioioioi jkjkjkjkjkjkjkjkjkjkkjkjkjkkj klklklkllk klklklklklklklklklklklklklklkl ytuyuyiuyiuyy";

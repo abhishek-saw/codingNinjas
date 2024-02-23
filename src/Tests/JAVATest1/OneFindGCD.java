@@ -1,4 +1,4 @@
-package Tests;
+package Tests.JAVATest1;
 
 public class OneFindGCD {
     public static void main(String[] args) {

@@ -1,6 +1,6 @@
-package Tests;
+package Tests.JAVATest1;
 
-public class OneNinjaPuzzle {
+public class NinjaPuzzle {
     public static void main(String[] args) {
         int n = 5;
         int i = 1;

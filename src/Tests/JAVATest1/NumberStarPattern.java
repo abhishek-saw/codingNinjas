@@ -1,8 +1,8 @@
-package Tests;
+package Tests.JAVATest1;
 
 import java.util.Scanner;
 
-public class OneNumberStarPattern {
+public class NumberStarPattern {
     public static void main(String[] args) {
 
         Scanner s = new Scanner(System.in);
