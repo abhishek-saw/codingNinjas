@@ -2,20 +2,20 @@ package Tests.DSATest1;
 
 public class SplitArray {
     public static void main(String[] args) {
-        int input [] = {4,3,1};
+        int[] input = {4,3,1};
         System.out.println(splitArray(input));
-        int input1 [] = {2,1};
+        int[] input1 = {2,1};
         System.out.println(splitArray(input1));
-        int input2 [] = {1,1,1};
+        int[] input2 = {1,1,1};
         System.out.println(splitArray(input2));
-        int input3[] = {1, 2, 3, 4};
+        int[] input3 = {1, 2, 3, 4};
         System.out.println(splitArray(input3));
     }
 
     private static boolean splitArray(int[] input) {
         return check(input, 0, 0, 0);
     }
-    public static boolean check(int input[], int startIndex, int lSum, int rSum) {
+    public static boolean check(int[] input, int startIndex, int lSum, int rSum) {
         if (startIndex == input.length) {
             return lSum == rSum;
         }
