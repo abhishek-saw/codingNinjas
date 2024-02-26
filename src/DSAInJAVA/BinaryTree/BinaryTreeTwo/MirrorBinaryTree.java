@@ -49,8 +49,8 @@ public class MirrorBinaryTree {
         if(root ==null){
             return;
         }
-        mirrorBinaryTree(root.left);
-        mirrorBinaryTree(root.right);
+        mirrorBinaryTreeBetter(root.left);
+        mirrorBinaryTreeBetter(root.right);
         BinaryTreeNode<Integer> integerBinaryTreeNode = root.right;
         root.right = root.left;
         root.left = integerBinaryTreeNode;
