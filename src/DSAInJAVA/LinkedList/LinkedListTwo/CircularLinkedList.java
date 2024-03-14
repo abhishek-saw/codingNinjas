@@ -11,8 +11,7 @@ public class CircularLinkedList {
         n2.next = n3;
         n3.next = n4;
         n4.next = n1;
-        Node<Integer> head = n1;
-        printCircularLinkedList(head);
+        printCircularLinkedList(n1);
     }
     private static void printCircularLinkedList(Node<Integer> head) {
         Node<Integer> temp = head;

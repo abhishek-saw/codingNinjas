@@ -41,6 +41,31 @@ public class DeleteNodeLL {
         System.out.println();
         Node<Integer> result2 = deleteNode(result1,pos2);
         printLinkedList(result2);
+        System.out.println();
+        printLinkedList(deleteNodeBetter(result2,3));
+    }
+    private static Node<Integer> deleteNodeBetter(Node<Integer> head, int pos){
+        if(head==null){
+            return null;
+        }
+        if(pos==0){
+            return head.next;
+        }
+        Node<Integer> curr = head;
+        Node<Integer> prev = null;
+        int count = 0;
+        while(curr!=null){
+            if(count==pos){
+                prev.next = curr.next;
+                break;
+            }
+            else{
+                count++;
+                prev = curr;
+                curr = curr.next;
+            }
+        }
+        return head;
     }
 
     public static Node<Integer> deleteNode(Node<Integer> head, int pos) {

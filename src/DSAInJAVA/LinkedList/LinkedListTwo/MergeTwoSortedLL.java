@@ -14,8 +14,45 @@ public class MergeTwoSortedLL {
         printLLRecursively(head2);
         System.out.println();
         printLLRecursively(mergeTwoSortedLL(head1, head2));
+//        printLLRecursively(mergeTwoSortedCleanLL(head1, head2));
     }
-
+    public static Node<Integer> mergeTwoSortedCleanLL(Node<Integer> head1, Node<Integer> head2){
+        if(head1==null){
+            return head2;
+        }
+        if(head2==null){
+            return head1;
+        }
+        Node<Integer> ansHead;
+        Node<Integer> ansTail;
+        if(head1.data>head2.data){
+            ansHead = head2;
+            head2 = head2.next;
+        }
+        else{
+            ansHead = head1;
+            head1 = head1.next;
+        }
+        ansTail = ansHead;
+        while(head1!=null && head2!=null){
+            if(head2.data>head1.data){
+                ansTail.next = head1;
+                head1 = head1.next;
+            }
+            else{
+                ansTail.next = head2;
+                head2 = head2.next;
+            }
+            ansTail = ansTail.next;
+        }
+        if(head1!=null){
+            ansTail.next = head1;
+        }
+        if(head2!=null){
+            ansTail.next = head2;
+        }
+        return ansHead;
+    }
     public static Node<Integer> mergeTwoSortedLL(Node<Integer> head1, Node<Integer> head2) {
         if(head1==null){
             return head2;

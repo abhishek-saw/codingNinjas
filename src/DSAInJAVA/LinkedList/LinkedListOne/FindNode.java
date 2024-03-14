@@ -14,7 +14,22 @@ public class FindNode {
             n4.next = n5;
             n5.next = n6;
             System.out.println(findNode(n1,9));
-
+            System.out.println(findNode2(n1,9));
+        }
+    public static int findNode2(Node<Integer> head, int n){
+        if (head == null) {
+            return -1;
+        }
+        else if (head.data == n) {
+            return 0 ;
+        }
+        int ans = findNode(head.next,n);
+        if(ans==-1){
+            return -1;
+        }
+        else{
+            return 1+ans;
+        }
     }
     public static int findNode(Node<Integer> head, int n) {
             Node<Integer> temp = head;

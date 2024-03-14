@@ -4,30 +4,78 @@ import static DSAInJAVA.LinkedList.LinkedListTwo.PrintLLRecursively.printLLRecur
 
 public class EvenAfterOdd {
     public static void main(String[] args) {
-//        input: 1 11 3 6 8 0 9 -1
-//        1 4 5 2 -1
-
         Node<Integer> n1 = new Node<>(4);
         Node<Integer> n2 = new Node<>(2);
         Node<Integer> n3 = new Node<>(7);
         Node<Integer> n4 = new Node<>(8);
         Node<Integer> n5 = new Node<>(3);
         Node<Integer> n6 = new Node<>(36);
-//        Node<Integer> n7 = new Node<>(9);
-
-
-
+        Node<Integer> n7 = new Node<>(9);
         n1.next = n2;
         n2.next = n3;
         n3.next = n4;
         n4.next = n5;
         n5.next = n6;
-//        n6.next = n7;
+        n6.next = n7;
         printLLRecursively(n1);
         System.out.println();
         printLLRecursively(evenAfterOdd(n1));
+        printLLRecursively(evenOdd(n1));
     }
-
+    private static Node<Integer> evenOdd(Node<Integer> head){
+        if(head==null){
+            return null;
+        }
+        Node<Integer> oddHead = null;
+        Node<Integer> oddTail ;
+        Node<Integer> evenHead = null;
+        Node<Integer> evenTail ;
+        Node<Integer> temp = head;
+        if(temp.data%2!=0){
+            oddHead = temp;
+        }
+        else{
+            evenHead = temp;
+        }
+        oddTail = oddHead;
+        evenTail = evenHead;
+        temp = temp.next;
+        while(temp!=null){
+            if(temp.data%2==0){
+                if(evenHead==null){
+                    evenHead = temp;
+                    evenTail = evenHead;
+                }
+                else {
+                    evenTail.next = temp;
+                    evenTail = evenTail.next;
+                }
+            }
+            else{
+                if(oddHead==null){
+                    oddHead = temp;
+                    oddTail = oddHead;
+                }
+                else {
+                    oddTail.next = temp;
+                    oddTail = oddTail.next;
+                }
+            }
+            temp = temp.next;
+        }
+        if(evenTail!=null){
+            evenTail.next = null;
+        }
+        if(oddTail!=null){
+            oddTail.next = evenHead;
+        }
+        if(oddHead==null){
+            return evenHead;
+        }
+        else{
+            return oddHead;
+        }
+    }
     public static Node<Integer> evenAfterOdd(Node<Integer> head) {
         if(head==null || head.next==null){
             return head;

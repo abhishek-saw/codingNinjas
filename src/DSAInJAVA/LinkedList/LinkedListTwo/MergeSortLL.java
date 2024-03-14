@@ -10,6 +10,22 @@ public class MergeSortLL {
         System.out.println();
         System.out.println("MergeSort LL");
         printLLRecursively(mergeSortLL(head));
+//        PrintLLRecursively.printLLRecursively(mergeSort(head));
+    }
+    public static Node<Integer> mergeSort(Node<Integer> head){
+        if(head==null ||head.next==null){
+            return head;
+        }
+        Node<Integer> temp1 = head;
+        Node<Integer> node1 = temp1;
+        Node<Integer> node2 = midPointLL(head).next;
+        while(temp1.next != node2 ){
+            temp1 = temp1.next;
+        }
+        temp1.next = null;
+        Node<Integer> sort1 = mergeSort(node1);
+        Node<Integer> sort2 = mergeSort(node2);
+        return MergeTwoSortedLL.mergeTwoSortedCleanLL(sort1,sort2);
     }
     public static Node<Integer> mergeSortLL(Node<Integer> head) {
         if(head==null || head.next==null){

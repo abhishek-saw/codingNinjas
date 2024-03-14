@@ -32,7 +32,7 @@ public class KReverse {
         printLLRecursively(kReverse(n1,k));
     }
     private static Node<Integer> kReverse(Node<Integer> head,int k) {
-        if(head==null || head.next==null){
+        if(head==null || head.next==null||k<=1){
             return head;
         }
         Node<Integer> prev = null;
@@ -40,9 +40,6 @@ public class KReverse {
         Node<Integer> next = null;
         int count = 0;
 //        System.out.println("nodeCount: " + nodeCount);
-        if(k<=1){
-            return head;
-        }
         while(curr!=null && count<k){ // we are doing for first k elements, that why count<k
             next = curr.next;
             curr.next = prev;

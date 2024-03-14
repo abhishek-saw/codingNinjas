@@ -4,31 +4,31 @@ import static DSAInJAVA.LinkedList.LinkedListTwo.PrintLLRecursively.printLLRecur
 
 public class BubbleSortLL {
     public static void main(String[] args) {
-//        While curr->next != NULL:
-//        temp = head
-//        size = 1 + length (temp-›next)
-//        Return size
+/*
+        While curr->next != NULL:
+        temp = head
+        size = 1 + length (temp-›next)
+        Return size
+        For i from 0 to length (head) exclusive:
+        prev = NULL, curr = head
+        While curr->next != NULL:
+        If curr-›data › curr-›next->data:
+          If prev != NULL:
+        temp = curr->next->next                + Store the next node after the next node
+        curr-next→>next = curr                 + Update the next of the next node to point to the current node
+        prev->next = curr->next                + Update the previous node to point to the next node
+        curr-›next = temp                      + Update the current node to point to the node after the next node
+        prev = prev-›next                      + Move the previous pointer to the next node
+          Else:
+        head = curr->next                      + Update the head to point to the next node
+        curr-›next = head-›next                + Update the current node to point to the node after the new head
+        head->next = curr                      + Update the new head to point to the current node
+        prev = head                            + Set the previous pointer to the new head
+        Else:
+        prev = curr;
+        curr = curr.next;
+*/
 
-//        For i from 0 to length (head) exclusive:
-//        prev = NULL, curr = head
-//        While curr->next != NULL:
-//        If curr-›data › curr-›next->data:
-//          If prev != NULL:
-//        temp = curr->next->next                + Store the next node after the next node
-//        curr-next→>next = curr                 + Update the next of the next node to point to the current node
-//        prev->next = curr->next                + Update the previous node to point to the next node
-//        curr-›next = temp                      + Update the current node to point to the node after the next node
-//        prev = prev-›next                      + Move the previous pointer to the next node
-//          Else:
-//        head = curr->next                      + Update the head to point to the next node
-//        curr-›next = head-›next                + Update the current node to point to the node after the new head
-//        head->next = curr                      + Update the new head to point to the current node
-//        prev = head                            + Set the previous pointer to the new head
-//        Else:
-//        prev = curr;
-//        curr = curr.next;
-//
-//
         Node<Integer> n1 = new Node<>(11);
         Node<Integer> n2 = new Node<>(17);
         Node<Integer> n3 = new Node<>(4);
@@ -44,8 +44,31 @@ public class BubbleSortLL {
         printLLRecursively(n1);
         System.out.println();
         printLLRecursively(bubbleSortLL(n1));
+        System.out.println();
+        printLLRecursively(bubbleSortLLData(n3));
     }
-
+    private static Node<Integer> bubbleSortLLData(Node<Integer> head){
+        if(head==null || head.next==null){
+            return head;
+        }
+        int len = lengthLL(head);
+        Node<Integer> curr = head.next;
+        Node<Integer> prev = head;
+        for(int i=0;i<len;i++){
+            while(curr!=null){
+                if(curr.data<prev.data){
+                    int data = curr.data;
+                    curr.data = prev.data;
+                    prev.data = data;
+                }
+                prev = curr;
+                curr = curr.next;
+            }
+            curr = head.next;
+            prev = head;
+        }
+        return head;
+    }
     private static Node<Integer> bubbleSortLL(Node<Integer> head) {
         if(head==null || head.next==null){
             return head;
@@ -63,13 +86,12 @@ public class BubbleSortLL {
                         curr.next = temp;
                         prev = prev.next;
                     }
-                    else{
+                    else {
                         head = curr.next;
                         curr.next = head.next;
                         head.next = curr;
                         prev = head;
                     }
-
                 }
                 else {
                     prev = curr;

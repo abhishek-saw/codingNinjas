@@ -11,9 +11,42 @@ public class SkipMDeleteN {
         int M = 2;
         int N = 3;
         printLLRecursively(skipMDeleteN(head,M,N));
-
+        System.out.println();
+        int M1 = 1;
+        int N1 = 1;
+        printLLRecursively(skipMDeleteNBetter(head,M1,N1));
     }
-
+    private static Node<Integer> skipMDeleteNBetter(Node<Integer> head, int M, int N) {
+        if (head == null || M == 0) {
+            return null;
+        }
+        Node<Integer> temp = head;
+        Node<Integer> newHead = null;
+        Node<Integer> newTail = null;
+        while (temp != null) {
+            int count1 = 0;
+            while (count1 < M && temp != null) {
+                if (newHead == null) {
+                    newHead = temp;
+                    newTail = newHead;
+                    temp = temp.next;
+                }
+                else {
+                    newTail.next = temp;
+                    temp = temp.next;
+                    newTail = newTail.next;
+                    newTail.next = null;
+                }
+                count1++;
+            }
+            int count2 = 0;
+            while (count2 < N && temp != null) {
+                temp = temp.next;
+                count2++;
+            }
+        }
+        return newHead;
+    }
     private static Node<Integer> skipMDeleteN(Node<Integer> head, int M, int N) {
         if(head==null || M==0){
             return null;
@@ -23,14 +56,9 @@ public class SkipMDeleteN {
         while(temp!=null){
             int x = 1;
             while(x<M && temp!=null){
-//                System.out.println(temp.data);
                 temp = temp.next;
                 x++;
             }
-//            printLLRecursively(newHead);
-//            System.out.println();
-//            printLLRecursively(temp);
-//            System.out.println();
             if(temp==null){
                 return newHead;
             }
@@ -40,10 +68,7 @@ public class SkipMDeleteN {
                 newTemp = newTemp.next;
                 y++;
             }
-//            printLLRecursively(newTemp);
-//            System.out.println();
             temp.next = newTemp;
-//            printLLRecursively(temp);
             temp = temp.next;
         }
         return newHead;
