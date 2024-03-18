@@ -4,10 +4,11 @@ import java.util.Stack;
 
 public class BalanceParenthesis {
     public static void main(String[] args) {
-        String expression = "{}";
+        String expression = ")()()(";
         System.out.println(isBalanced(expression));
-    }
+        System.out.println(isBracketBalanced(expression));
 
+    }
     private static boolean isBalanced(String expression) {
         if(expression.isEmpty()){
             return true;
@@ -33,5 +34,29 @@ public class BalanceParenthesis {
             return false;
         }
         return isBoolean;
+    }
+    private static boolean isBracketBalanced(String expression) {
+        if(expression.isEmpty()){
+            return true;
+        }
+        Stack<Character> characterStack = new Stack<>();
+        int i = 0;
+        while(i<expression.length()){
+            char newChar = expression.charAt(i);
+            if(newChar=='(' ||newChar=='{' || newChar=='[')
+                characterStack.push(newChar);
+            else{
+                if(!characterStack.isEmpty()) {
+                    char newChars = characterStack.peek();
+                    if (newChars == '(' || newChars == '{' || newChars == '[')
+                        characterStack.pop();
+                    else {
+                        characterStack.push(newChar);
+                    }
+                }
+            }
+            i++;
+        }
+        return characterStack.isEmpty();
     }
 }
