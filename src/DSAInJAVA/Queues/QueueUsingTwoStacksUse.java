@@ -1,8 +1,8 @@
 package DSAInJAVA.Queues;
 
-public class QueuesUsingTwoStacksUse {
+public class QueueUsingTwoStacksUse {
     public static void main(String[] args) throws QueueEmptyException {
-        QueuesUsingTwoStacks<Integer> queue = new QueuesUsingTwoStacks<>();
+        QueueUsingTwoStacks<Integer> queue = new QueueUsingTwoStacks<>();
         int[] arr = {10,20,30,40,50};
         for(int elem : arr){
             queue.enqueue(elem);

@@ -3,10 +3,10 @@ package DSAInJAVA.Queues;
 
 import java.util.Stack;
 
-public class QueuesUsingTwoStacks<T> {
+public class QueueUsingTwoStacks<T> {
     private Stack<T> s1;
     private Stack<T> s2;
-    public QueuesUsingTwoStacks(){
+    public QueueUsingTwoStacks(){
         s1 = new Stack<>();
         s2 = new Stack<>();
     }
