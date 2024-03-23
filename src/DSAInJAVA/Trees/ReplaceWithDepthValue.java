@@ -1,0 +1,33 @@
+package DSAInJAVA.Trees;
+
+public class ReplaceWithDepthValue {
+    public static void main(String[] args) {
+        TreeNode<Integer> root = new TreeNode<>(4);
+        TreeNode<Integer> node1 = new TreeNode<>(2);
+        TreeNode<Integer> node2 = new TreeNode<>(3);
+        TreeNode<Integer> node3 = new TreeNode<>(1);
+        TreeNode<Integer> node4 = new TreeNode<>(5);
+        TreeNode<Integer> node5 = new TreeNode<>(6);
+        root.children.add(node1);
+        root.children.add(node2);
+        root.children.add(node3);
+        node2.children.add(node4);
+        node2.children.add(node5);
+        PrintTree.printTree(root);
+        System.out.println();
+        replaceWithDepthValue(root);
+        PrintTree.printTree(root);
+    }
+    private static void replaceWithDepthValue(TreeNode<Integer> root) {
+        replaceWithDepthValueHelper(root,0);
+    }
+    private static void replaceWithDepthValueHelper(TreeNode<Integer> root, int depth) {
+        if (root == null) {
+            return ;
+        }
+        root.data = depth;
+        for (TreeNode<Integer> childNode: root.children){
+            replaceWithDepthValueHelper(childNode,depth+1);
+        }
+    }
+}
