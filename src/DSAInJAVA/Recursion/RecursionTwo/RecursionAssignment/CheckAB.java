@@ -1,4 +1,4 @@
-package DSAInJAVA.Recursion.RecursionThreeAssignment;
+package DSAInJAVA.Recursion.RecursionTwo.RecursionAssignment;
 
 public class CheckAB {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package DSAInJAVA.Recursion.RecursionThreeAssignment;
+package DSAInJAVA.Recursion.RecursionTwo.RecursionAssignment;
 
 public class GeometricSum {
     public static void main(String[] args) {

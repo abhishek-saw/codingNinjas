@@ -1,4 +1,4 @@
-package DSAInJAVA.Recursion.RecursionThreeAssignment;
+package DSAInJAVA.Recursion.RecursionTwo.RecursionAssignment;
 
 public class Staircase {
     public static void main(String[] args) {
