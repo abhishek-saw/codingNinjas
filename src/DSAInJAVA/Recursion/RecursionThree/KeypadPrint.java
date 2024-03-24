@@ -1,6 +1,6 @@
 package DSAInJAVA.Recursion.RecursionThree;
 
-public class PrintKeypad {
+public class KeypadPrint {
     public static void main(String[] args) {
         printKeypad(23,"");
     }

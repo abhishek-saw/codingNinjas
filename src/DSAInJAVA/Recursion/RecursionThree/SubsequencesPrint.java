@@ -1,6 +1,6 @@
 package DSAInJAVA.Recursion.RecursionThree;
 
-public class PrintSubsequences {
+public class SubsequencesPrint {
     public static void main(String[] args) {
         String string = "abc";
         printsSubsequences(string,"");
