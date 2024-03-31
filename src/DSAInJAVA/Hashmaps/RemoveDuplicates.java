@@ -10,16 +10,14 @@ public class RemoveDuplicates {
         System.out.println(output);
     }
     private static ArrayList<Integer> removeDuplicates(int[] arr) {
-        HashMap<Integer, Boolean> integerHashMap = new HashMap<>();
+        HashMap<Integer,Boolean> integerHashMap = new HashMap<>();
         ArrayList<Integer> ans = new ArrayList<>();
         for(Integer integer: arr){
             if(integerHashMap.containsKey(integer)){
                 continue;
             }
-            else{
-                ans.add(integer);
-                integerHashMap.put(integer,true);
-            }
+            ans.add(integer);
+            integerHashMap.put(integer,true);
         }
         return ans;
     }

@@ -92,6 +92,16 @@ public class Map<K,V> {
         return false;
     }
     private void rehash() {
+        //    TIME COMPLEXITY
+//    insert-> WORST : O(N) AVERAGE : O(n/b)
+//    1. Calculating hashcode -> O(l) => length of String {Average of string.length is 5<<<<<10^5} hence we will ignore this
+//    2. Traversing on Linked List -> 0(N) if all are on same but
+//    Average load on one bucket is n/b => load factor
+//    n/b<0.7 =>Ensure bucket not contains many entries
+//      n = number of entries in the map;
+//      b = number of buckets
+//    if n = 100 then b = 120-130
+//    if load factor > 0.7 <=>  Do rehashing
         System.out.println("Rehashing: buckets " + buckets.size()+ " size " + count);
         ArrayList<MapNode<K,V>> temp = buckets;
         buckets = new ArrayList<>();
@@ -113,14 +123,5 @@ public class Map<K,V> {
     public double loadFactor() {
         return (1.0*count)/numBuckets;
     }
-//    TIME COMPLEXITY
-//    insert-> WORST : O(N) AVERAGE : O(n/b)
-//    1. Calculating hashcode -> O(l) => length of String {Average of string.length is 5<<<<<10^5} hence we will ignore this
-//    2. Traversing on Linked List -> 0(N) if all are on same but
-//    Average load on one bucket is n/b => load factor
-//    n/b<0.7 =>Ensure bucket not contains many entries
-//      n = number of entries in the map;
-//      b = number of buckets
-//    if n = 100 then b = 120-130
-//    if load factor > 0.7 <=>  Do rehashing
+
 }
