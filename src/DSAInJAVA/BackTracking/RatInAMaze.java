@@ -42,7 +42,7 @@ public class RatInAMaze {
         }
         return false;
     }
-    private static void print(int[][] array) {
+    public static void print(int[][] array) {
         for (int[] ins : array) {
             for (int c = 0; c < array[0].length; c++) {
                 System.out.print(ins[c] + " ");
