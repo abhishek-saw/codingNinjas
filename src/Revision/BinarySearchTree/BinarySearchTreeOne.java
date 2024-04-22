@@ -8,12 +8,10 @@ public class BinarySearchTreeOne {
     public static class LinkedListNode<T> {
         T data;
         LinkedListNode<Integer> next;
-
         public LinkedListNode(T data) {
             this.data = data;
         }
     }
-
     public static void main(String[] args) {
         BinaryTreeNode<Integer> root = new BinaryTreeNode<>(8);
         BinaryTreeNode<Integer> rootL = new BinaryTreeNode<>(5);
@@ -93,7 +91,6 @@ public class BinarySearchTreeOne {
         BinaryTreeNode<Integer> answer =  getLCABetterHelper(root,a,b);
         return answer==null ? -1: answer.data;
     }
-
     private static BinaryTreeNode<Integer> getLCABetterHelper(BinaryTreeNode<Integer> root, int a, int b) {
         if(root==null ||root.data==a ||root.data==b ){
             return root;
@@ -118,7 +115,6 @@ public class BinarySearchTreeOne {
             }
         }
     }
-
     private static int getLCA(BinaryTreeNode<Integer> root, int a, int b) {
         if (root == null) {
             return -1;
